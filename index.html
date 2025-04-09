@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC Listening Practice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card shadow-lg p-4 w-100" >
+            <!-- Màn hình chọn Part -->
+            <div id="part-selection" class="screen" style="max-width: 400px; margin: 0 auto;">
+                <h1 class="text-center mb-4">Choose TOEIC Listening Parts</h1>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="part1">
+                    <label class="form-check-label" for="part1">Part 1: Photographs (1-6)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="2" id="part2">
+                    <label class="form-check-label" for="part2">Part 2: Question-Response (7-31)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="3" id="part3">
+                    <label class="form-check-label" for="part3">Part 3: Conversations (32-70)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="4" id="part4">
+                    <label class="form-check-label" for="part4">Part 4: Short Talks (71-100)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="5" id="part5">
+                    <label class="form-check-label" for="part5">Part 5: Short Talks (101-130)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="6" id="part6">
+                    <label class="form-check-label" for="part6">Part 6: Short Talks (131-146)</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="7" id="part7">
+                    <label class="form-check-label" for="part7">Part 7: Short Talks (147-200)</label>
+                </div>
+                <button id="start" class="btn btn-primary btn-lg w-100 mt-4">Start</button>
+            </div>
+
+            <!-- Màn hình chọn đáp án -->
+            <div id="question-screen" class="screen" style="display: none;" style="max-width: 400px;">
+                <h1 class="text-center">Question <span id="question-number"></span></h1>
+                <div id="options" class="my-option">
+                    <button class="btn btn-outline-primary my-btn answer-btn" data-value="A">A</button>
+                    <button class="btn btn-outline-primary my-btn answer-btn" data-value="B">B</button>
+                    <button class="btn btn-outline-primary my-btn answer-btn" data-value="C">C</button>
+                    <button class="btn btn-outline-primary my-btn answer-btn" data-value="D">D</button>
+                    <button class="btn btn-outline-primary my-btn answer-btn" data-value="?">?</button>
+                </div>
+                <div class="d-flex justify-content-between mt-4" style="margin: 0 auto; width: 400px;">
+                    <button id="back" class="btn btn-secondary">Back</button>
+                    <button id="next" class="btn btn-primary">Next</button>
+                    <button id="finish" class="btn btn-success">Finish</button>
+                </div>
+            </div>
+
+            <!-- Màn hình kết quả -->
+            <div id="result-screen" class="screen" style="display: none;" style="max-width: 800px;">
+                <h1 class="text-center mb-4">Your Answers</h1>
+                <div id="results" class="text-start"></div>
+                <button id="restart" class="btn btn-primary btn-lg w-100 mt-4">Restart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

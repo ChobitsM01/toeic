@@ -1,0 +1,50 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.form-check {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.answer-btn {
+  font-size: 1.25rem;
+  padding: 15px;
+  transition: all 0.3s;
+}
+
+.answer-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-lg {
+  padding: 10px 20px;
+}
+
+#results {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.my-btn {
+  padding: 0 !important;
+  max-width: 400px;
+  width: 400px;
+}
+
+.my-option {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
